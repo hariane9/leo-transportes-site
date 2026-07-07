@@ -37,7 +37,7 @@
   <link rel="icon" type="image/png" href="assets/logo1.png">
 
   <!-- Preload da imagem de fundo do hero (LCP) -->
-  <link rel="preload" as="image" href="assets/foto1.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/carrocel1.jpg" fetchpriority="high">
 
   <!-- Tipografia -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -121,12 +121,18 @@
   <main id="main">
 
     <!-- ===================== Hero ===================== -->
-    <section class="hero" id="hero" aria-label="Destaque principal" style="background-image:url('assets/foto1.jpg');">
+    <section class="hero" id="hero" aria-label="Destaque principal">
+      <div class="hero-carousel" aria-hidden="true">
+        <div class="hero-slide is-active" style="background-image:url('assets/carrocel1.jpg');"></div>
+        <div class="hero-slide" style="background-image:url('assets/carrocel2.jpg');"></div>
+        <div class="hero-slide" style="background-image:url('assets/carrocel3.jpg');"></div>
+      </div>
       <div class="hero-overlay"></div>
 
       <div class="hero-content">
         <p class="eyebrow">Mudanças e Transportes na Zona de Lisboa e Margem Sul</p>
         <h1>A Sua Mudança Sem Complicações<br><span class="h1-secondary">Mais de 10 Anos de Experiência ao Seu Lado</span></h1>
+        <a class="btn hero-call-btn" href="tel:+351911031945">📞 Ligue 911 031 945</a>
         <p class="hero-sub">Serviço completo de mudanças e transportes para particulares e empresas, com equipa especializada, elevador exterior e total segurança em cada etapa.</p>
         <div class="hero-cta">
           <a class="btn btn-yellow" href="https://wa.me/351911031945" target="_blank" rel="noopener">

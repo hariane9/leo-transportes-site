@@ -354,9 +354,26 @@ body.has-cookie-banner .whatsapp-float {
   align-items: center;
   overflow: hidden;
   background-color: var(--color-navy);
+}
+
+.hero-carousel {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
   background-size: cover;
   background-position: 78% center;
   background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
 }
 
 .hero-overlay {
@@ -368,6 +385,7 @@ body.has-cookie-banner .whatsapp-float {
 .hero-content {
   position: relative;
   z-index: 2;
+  display: grid;
   color: var(--color-white);
   padding-top: 112px;
   padding-bottom: 96px;
@@ -417,6 +435,34 @@ body.has-cookie-banner .whatsapp-float {
   font-weight: 700;
 }
 
+.hero-call-btn {
+  display: flex;
+  justify-self: center;
+  width: fit-content;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 26px;
+  padding: 16px 34px;
+  border-radius: 999px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  background: linear-gradient(120deg, var(--color-yellow) 0%, #25d366 100%);
+  box-shadow: 0 14px 32px rgba(253, 200, 0, 0.35), 0 0 0 3px rgba(255, 255, 255, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: pulse-call-btn 2.6s infinite;
+}
+
+.hero-call-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(37, 211, 102, 0.45), 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+@keyframes pulse-call-btn {
+  0%, 100% { box-shadow: 0 14px 32px rgba(253, 200, 0, 0.35), 0 0 0 0 rgba(37, 211, 102, 0.45); }
+  50% { box-shadow: 0 14px 32px rgba(253, 200, 0, 0.35), 0 0 0 10px rgba(37, 211, 102, 0); }
+}
+
 .hero-sub {
   font-size: clamp(1.05rem, 1.4vw, 1.15rem);
   color: rgba(255, 255, 255, 0.88);
@@ -427,6 +473,8 @@ body.has-cookie-banner .whatsapp-float {
 .hero-cta {
   display: flex;
   flex-wrap: wrap;
+  justify-self: center;
+  width: fit-content;
   gap: 18px;
   margin-top: 6px;
 }
@@ -1326,7 +1374,7 @@ section {
     margin: 0 auto;
   }
 
-  .hero {
+  .hero-slide {
     background-position: 62% center;
   }
 
@@ -1496,7 +1544,15 @@ section {
     font-size: clamp(2rem, 8vw, 2.5rem);
   }
 
+  .hero-call-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 14px 20px;
+  }
+
   .hero-cta {
+    width: 100%;
     flex-direction: column;
     align-items: stretch;
   }
