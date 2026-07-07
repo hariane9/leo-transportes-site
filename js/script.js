@@ -23,9 +23,9 @@
    email. Isto permite testar o site localmente antes de ligar
    a conta EmailJS.
    ========================================================= */
-const EMAILJS_PUBLIC_KEY = "";   // <-- colar aqui a Public Key da EmailJS
-const EMAILJS_SERVICE_ID = "";   // <-- colar aqui o Service ID da EmailJS
-const EMAILJS_TEMPLATE_ID = "";  // <-- colar aqui o Template ID da EmailJS
+const EMAILJS_PUBLIC_KEY = "qNpqEIzJsDxDr0Lxg";   // <-- colar aqui a Public Key da EmailJS
+const EMAILJS_SERVICE_ID = "service_jnij4pb";   // <-- colar aqui o Service ID da EmailJS
+const EMAILJS_TEMPLATE_ID = "template_r6cossp";  // <-- colar aqui o Template ID da EmailJS
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -36,6 +36,24 @@ document.addEventListener('DOMContentLoaded', function () {
   if (EMAILJS_PUBLIC_KEY && typeof emailjs !== 'undefined') {
     emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
     emailjsReady = true;
+  }
+
+  /* -----------------------------------------------------------
+     0.1) Carrossel automático do Hero (fade a cada 5s)
+  ----------------------------------------------------------- */
+  var heroSlides = Array.prototype.slice.call(document.querySelectorAll('.hero-slide'));
+
+  if (heroSlides.length > 1) {
+    var currentHeroSlide = heroSlides.findIndex(function (slide) {
+      return slide.classList.contains('is-active');
+    });
+    if (currentHeroSlide === -1) currentHeroSlide = 0;
+
+    window.setInterval(function () {
+      heroSlides[currentHeroSlide].classList.remove('is-active');
+      currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+      heroSlides[currentHeroSlide].classList.add('is-active');
+    }, 5000);
   }
 
   /* -----------------------------------------------------------
