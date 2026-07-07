@@ -27,6 +27,23 @@ const EMAILJS_PUBLIC_KEY = "qNpqEIzJsDxDr0Lxg";   // <-- colar aqui a Public Key
 const EMAILJS_SERVICE_ID = "service_jnij4pb";   // <-- colar aqui o Service ID da EmailJS
 const EMAILJS_TEMPLATE_ID = "template_jgda2ic";  // <-- colar aqui o Template ID da EmailJS
 
+/* =========================================================
+   CONFIGURAÇÃO GOOGLE ANALYTICS (GA4)
+   ---------------------------------------------------------
+   Preencha aqui o Measurement ID do Google Analytics 4
+   (formato "G-XXXXXXXXXX") para ativar o rastreio de visitas.
+
+   Como obter: https://analytics.google.com → Admin → Criar
+   propriedade → Fluxos de dados → Web → copiar o "ID de métricas".
+
+   Enquanto esta constante estiver vazia (""), nenhum script do
+   Google Analytics é carregado — o site continua sem qualquer
+   rastreio. Quando preenchida, o Analytics só é carregado DEPOIS
+   de o visitante clicar em "Aceitar" no aviso de cookies (ou já
+   ter aceitado numa visita anterior), em conformidade com o RGPD.
+   ========================================================= */
+const GA4_MEASUREMENT_ID = ""; // <-- colar aqui o ID (ex: G-XXXXXXXXXX)
+
 document.addEventListener('DOMContentLoaded', function () {
 
   /* -----------------------------------------------------------
@@ -350,12 +367,33 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  /* Carrega o Google Analytics (GA4) — só é chamada depois do
+     consentimento de cookies, e só faz algo se o ID estiver preenchido. */
+  function loadGoogleAnalytics() {
+    if (!GA4_MEASUREMENT_ID || window.__gaLoaded) return;
+    window.__gaLoaded = true;
+
+    var gaScript = document.createElement('script');
+    gaScript.async = true;
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_MEASUREMENT_ID;
+    document.head.appendChild(gaScript);
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', GA4_MEASUREMENT_ID);
+  }
+
   if (cookieBanner && cookieAcceptBtn) {
     var consentAlreadyGiven = false;
     try {
       consentAlreadyGiven = window.localStorage.getItem(COOKIE_CONSENT_KEY) === 'accepted';
     } catch (e) {
       consentAlreadyGiven = false;
+    }
+
+    if (consentAlreadyGiven) {
+      loadGoogleAnalytics();
     }
 
     if (!consentAlreadyGiven) {
@@ -374,6 +412,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         cookieBanner.classList.remove('is-visible');
         document.body.classList.remove('has-cookie-banner');
+        loadGoogleAnalytics();
       });
     }
   }
