@@ -25,7 +25,7 @@
    ========================================================= */
 const EMAILJS_PUBLIC_KEY = "qNpqEIzJsDxDr0Lxg";   // <-- colar aqui a Public Key da EmailJS
 const EMAILJS_SERVICE_ID = "service_jnij4pb";   // <-- colar aqui o Service ID da EmailJS
-const EMAILJS_TEMPLATE_ID = "template_r6cossp";  // <-- colar aqui o Template ID da EmailJS
+const EMAILJS_TEMPLATE_ID = "template_jgda2ic";  // <-- colar aqui o Template ID da EmailJS
 
 document.addEventListener('DOMContentLoaded', function () {
 
