@@ -74,6 +74,23 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* -----------------------------------------------------------
+     0.2) Utilitário: limitar uma função a, no máximo, uma vez por
+     frame de animação (evita "forced reflow"/layout thrashing ao
+     recalcular o layout em todos os eventos de scroll).
+  ----------------------------------------------------------- */
+  function rafThrottle(fn) {
+    var ticking = false;
+    return function () {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        fn();
+        ticking = false;
+      });
+    };
+  }
+
+  /* -----------------------------------------------------------
      1) Cabeçalho: sombra/fundo ao fazer scroll
   ----------------------------------------------------------- */
   var header = document.getElementById('header');
@@ -86,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   updateHeaderOnScroll();
-  window.addEventListener('scroll', updateHeaderOnScroll, { passive: true });
+  window.addEventListener('scroll', rafThrottle(updateHeaderOnScroll), { passive: true });
 
   /* -----------------------------------------------------------
      2) Menu mobile (hamburger)
@@ -119,12 +136,22 @@ document.addEventListener('DOMContentLoaded', function () {
     .filter(Boolean);
   var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-link'));
 
+  // Guarda o offsetTop de cada secção em cache (só recalcula no resize),
+  // para não forçar um reflow de layout em cada evento de scroll.
+  var sectionOffsets = [];
+  function cacheSectionOffsets() {
+    sectionOffsets = sections.map(function (section) {
+      return { id: section.id, top: section.offsetTop };
+    });
+  }
+  cacheSectionOffsets();
+
   function updateActiveNavLink() {
     var currentId = null;
     var scrollPos = window.scrollY + window.innerHeight * 0.35;
 
-    sections.forEach(function (section) {
-      if (section.offsetTop <= scrollPos) {
+    sectionOffsets.forEach(function (section) {
+      if (section.top <= scrollPos) {
         currentId = section.id;
       }
     });
@@ -135,7 +162,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
   updateActiveNavLink();
-  window.addEventListener('scroll', updateActiveNavLink, { passive: true });
+  window.addEventListener('scroll', rafThrottle(updateActiveNavLink), { passive: true });
+  window.addEventListener('resize', rafThrottle(cacheSectionOffsets), { passive: true });
 
   /* -----------------------------------------------------------
      4) Modais (Política de Privacidade / Política de Cookies)

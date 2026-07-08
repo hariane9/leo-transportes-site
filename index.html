@@ -52,12 +52,14 @@
   <!-- <meta name="google-site-verification" content="COLAR_AQUI_O_CODIGO_DA_GOOGLE"> -->
 
   <!-- Preload da imagem de fundo do hero (LCP) -->
-  <link rel="preload" as="image" href="assets/carrocel1.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/carrocel1.webp" fetchpriority="high" type="image/webp">
 
-  <!-- Tipografia -->
+  <!-- Tipografia (carregada sem bloquear a renderização) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
 
   <!-- Folha de estilos -->
   <link rel="stylesheet" href="css/style.css">
@@ -68,7 +70,7 @@
        A configuração (Public Key / Service ID / Template ID) é
        feita em js/script.js — ver secção "CONFIGURAÇÃO EMAILJS".
        ========================================================= -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
 
   <!-- Dados estruturados (SEO local) — atualizar URL/morada reais antes de publicar -->
   <script type="application/ld+json">
@@ -145,9 +147,9 @@
     <!-- ===================== Hero ===================== -->
     <section class="hero" id="hero" aria-label="Destaque principal">
       <div class="hero-carousel" aria-hidden="true">
-        <div class="hero-slide is-active" style="background-image:url('assets/carrocel1.jpg');"></div>
-        <div class="hero-slide" style="background-image:url('assets/carrocel2.jpg');"></div>
-        <div class="hero-slide" style="background-image:url('assets/carrocel3.jpg');"></div>
+        <div class="hero-slide is-active" style="background-image:url('assets/carrocel1.webp');"></div>
+        <div class="hero-slide" style="background-image:url('assets/carrocel2.webp');"></div>
+        <div class="hero-slide" style="background-image:url('assets/carrocel3.webp');"></div>
       </div>
       <div class="hero-overlay"></div>
 
@@ -269,7 +271,10 @@
         <div class="differentials-grid">
           <div class="differential-card reveal">
             <div class="differential-image">
-              <img src="assets/foto3.jpg" alt="Embalamento e proteção de mobiliário pela LEO Transportes" loading="lazy" width="1400" height="1052">
+              <picture>
+                <source srcset="assets/foto3.webp" type="image/webp">
+                <img src="assets/foto3.jpg" alt="Embalamento e proteção de mobiliário pela LEO Transportes" loading="lazy" width="1400" height="1052">
+              </picture>
             </div>
             <div class="differential-body">
               <div class="icon-wrap">
@@ -282,7 +287,10 @@
 
           <div class="differential-card reveal reveal-delay-1">
             <div class="differential-image">
-              <img src="assets/foto5.jpg" alt="Transporte seguro de mudanças pela LEO Transportes" loading="lazy" width="1164" height="1351">
+              <picture>
+                <source srcset="assets/foto5.webp" type="image/webp">
+                <img src="assets/foto5.jpg" alt="Transporte seguro de mudanças pela LEO Transportes" loading="lazy" width="1164" height="1351">
+              </picture>
             </div>
             <div class="differential-body">
               <div class="icon-wrap">
@@ -295,7 +303,10 @@
 
           <div class="differential-card reveal reveal-delay-2">
             <div class="differential-image">
-              <img src="assets/foto6.jpg" alt="Elevador exterior para mudanças em pisos elevados pela LEO Transportes" loading="lazy" width="1254" height="1254">
+              <picture>
+                <source srcset="assets/foto6.webp" type="image/webp">
+                <img src="assets/foto6.jpg" alt="Elevador exterior para mudanças em pisos elevados pela LEO Transportes" loading="lazy" width="1254" height="1254">
+              </picture>
             </div>
             <div class="differential-body">
               <div class="icon-wrap">
@@ -313,7 +324,10 @@
     <section class="about" id="sobre">
       <div class="container about-grid">
         <div class="about-image reveal">
-          <img src="assets/foto2.jpg" alt="Frota de viaturas da LEO Transportes e Mudanças" loading="lazy" width="1448" height="1086">
+          <picture>
+            <source srcset="assets/foto2.webp" type="image/webp">
+            <img src="assets/foto2.jpg" alt="Frota de viaturas da LEO Transportes e Mudanças" loading="lazy" width="1448" height="1086">
+          </picture>
           <div class="about-badge">
             <div class="icon-wrap">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v10H3z"></path><path d="M14 10h4l3 3v4h-7z"></path><circle cx="7.5" cy="18" r="1.6"></circle><circle cx="17.5" cy="18" r="1.6"></circle></svg>

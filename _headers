@@ -27,3 +27,10 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.emailjs.com https://*.google-analytics.com https://*.analytics.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self';
   ! Access-Control-Allow-Origin
+
+# Cache de imagens e outros ficheiros estáticos da pasta assets/.
+# 1 dia (86400s): ganho de performance sem risco de ficar "preso"
+# a uma imagem antiga por muito tempo enquanto o site ainda está
+# em ajustes.
+/assets/*
+  Cache-Control: public, max-age=86400
