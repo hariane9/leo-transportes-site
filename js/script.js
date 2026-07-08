@@ -270,6 +270,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   quoteForm.addEventListener('submit', function (event) {
     event.preventDefault();
+
+    // Anti-spam: se o campo-armadilha (invisível para humanos) vier
+    // preenchido, foi um bot. Ignora silenciosamente, sem dar pista ao bot.
+    var honeypotField = quoteForm.querySelector('[name="website"]');
+    if (honeypotField && honeypotField.value.trim() !== '') {
+      return;
+    }
+
     hideFeedback();
 
     var isValid = true;

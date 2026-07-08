@@ -1,0 +1,29 @@
+# =========================================================
+# Cabeçalhos de segurança — LEO Transportes & Mudanças
+# ---------------------------------------------------------
+# Aplicados pelo Cloudflare Workers (static assets) a todas
+# as respostas do site. Ver: https://developers.cloudflare.com/workers/static-assets/headers/
+#
+# NOTA sobre a Content-Security-Policy (CSP):
+# Está em modo "Report-Only" de propósito — isto significa que
+# ela NÃO bloqueia nada, apenas regista no console do navegador
+# (F12 > Console) o que seria bloqueado se estivesse ativa.
+#
+# Antes de ativar a CSP a sério:
+#   1. Publica esta alteração.
+#   2. Navega pelo site publicado (incluindo o formulário de
+#      orçamento) e abre a consola do navegador (F12).
+#   3. Se não aparecerem avisos de "Content-Security-Policy
+#      Report-Only", muda o nome do cabeçalho abaixo de
+#      "Content-Security-Policy-Report-Only" para apenas
+#      "Content-Security-Policy" — passa a bloquear a sério.
+# =========================================================
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.emailjs.com https://*.google-analytics.com https://*.analytics.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self';
+  ! Access-Control-Allow-Origin

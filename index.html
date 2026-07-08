@@ -481,6 +481,13 @@
           Ver instruções completas no ficheiro README_EMAILJS.md.
         -->
         <form class="quote-form reveal reveal-delay-1" id="quoteForm" novalidate>
+          <!-- Campo-armadilha (honeypot) anti-spam: invisível para pessoas, mas
+               os bots costumam preenchê-lo automaticamente. Se vier preenchido,
+               o envio é silenciosamente ignorado em script.js. -->
+          <div class="form-field-honeypot" aria-hidden="true">
+            <label for="website">Não preencher este campo</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
           <div class="form-row">
             <div class="form-field">
               <label for="name">Nome*</label>

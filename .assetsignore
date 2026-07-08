@@ -1,0 +1,8 @@
+# Ficheiros que existem no repositório (para referência/documentação),
+# mas que NÃO devem ser publicados como ficheiros públicos do site.
+# Formato igual ao .gitignore. Ver: https://developers.cloudflare.com/workers/static-assets/binding/#ignoring-assets
+
+README_EMAILJS.md
+README_ANALYTICS.md
+wrangler.jsonc
+.gitignore
