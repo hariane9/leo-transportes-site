@@ -1994,3 +1994,44 @@ section {
   font-weight: 700;
   color: var(--color-purple);
 }
+
+/* =========================================================
+   Correções para ecrãs pequenos (telemóvel)
+   ========================================================= */
+html,
+body {
+  overflow-x: hidden; /* nunca permitir scroll/zoom horizontal */
+}
+
+/* Aviso de cookies: o parágrafo tinha flex-basis de 420px, que em coluna
+   (ecrãs ≤640px) virava 420px de ALTURA e empurrava o botão "Aceitar" para fora do ecrã. */
+@media (max-width: 640px) {
+  .cookie-banner .cookie-banner-inner p {
+    flex: 0 0 auto;
+  }
+
+  .cookie-banner {
+    padding: 16px 18px calc(16px + env(safe-area-inset-bottom, 0px));
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
+
+/* Menu lateral (telemóvel): fechado fica escondido e sem largura extra na página */
+@media (max-width: 760px) {
+  .main-nav {
+    overflow-x: hidden;
+    overflow-y: auto;
+    visibility: hidden;
+    transition: transform var(--transition), visibility 0s linear var(--transition);
+  }
+
+  .main-nav.is-open {
+    visibility: visible;
+    transition-delay: 0s;
+  }
+
+  .main-nav a {
+    white-space: normal;
+  }
+}
