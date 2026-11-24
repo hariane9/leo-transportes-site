@@ -34,3 +34,10 @@
 # em ajustes.
 /assets/*
   Cache-Control: public, max-age=86400
+
+# CSS e JavaScript: o navegador/Cloudflare confirma sempre se há versão nova,
+# para as alterações de estilo aparecerem logo após cada publicação.
+/css/*
+  Cache-Control: public, max-age=0, must-revalidate
+/js/*
+  Cache-Control: public, max-age=0, must-revalidate
