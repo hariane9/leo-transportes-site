@@ -6,3 +6,5 @@ README_EMAILJS.md
 README_ANALYTICS.md
 wrangler.jsonc
 .gitignore
+servidor-local.py
+__pycache__/

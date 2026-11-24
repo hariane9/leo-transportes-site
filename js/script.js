@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Fecha o menu mobile ao clicar numa hiperligação de navegação
-  document.querySelectorAll('.nav-link').forEach(function (link) {
+  document.querySelectorAll('.nav-link, .submenu a').forEach(function (link) {
     link.addEventListener('click', closeMobileNav);
   });
 
@@ -134,7 +134,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var sections = ['servicos', 'trabalhos', 'sobre', 'cobertura', 'orcamento', 'contacto']
     .map(function (id) { return document.getElementById(id); })
     .filter(Boolean);
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-link'));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-link')).filter(function (link) {
+    return (link.getAttribute('href') || '').charAt(0) === '#';
+  });
 
   // Guarda o offsetTop de cada secção em cache (só recalcula no resize),
   // para não forçar um reflow de layout em cada evento de scroll.
@@ -264,6 +266,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var quoteForm = document.getElementById('quoteForm');
   var formFeedback = document.getElementById('formFeedback');
 
+  if (quoteForm) { // o formulário existe apenas nas páginas Início e Orçamento
+
   var validators = {
     name: function (value) { return value.trim().length >= 2; },
     phone: function (value) { return /^[0-9+()\s-]{9,}$/.test(value.trim()); },
@@ -331,9 +335,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function handleSuccess() {
-      showFeedback('Pedido enviado com sucesso! Entraremos em contacto em breve.', 'success');
       quoteForm.reset();
       setLoading(false);
+      // Página de agradecimento (permite medir a conversão no Google Ads)
+      window.location.href = '/obrigado';
     }
 
     function handleError() {
@@ -385,6 +390,8 @@ document.addEventListener('DOMContentLoaded', function () {
       field.addEventListener('input', function () { setFieldError(fieldName, ''); });
     }
   });
+
+  } // fim: if (quoteForm)
 
   /* -----------------------------------------------------------
      8) Aviso de Cookies (banner de consentimento)

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <!-- ========================================================= -->
+  <!-- LEO Transportes & Mudanças — Site institucional            -->
+  <!-- HTML, CSS e JavaScript puro (sem frameworks)                -->
+  <!-- ========================================================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ---------- SEO básico ---------- -->
+  <title>Serviços de Mudanças em Lisboa e Margem Sul | LEO Transportes &amp; Mudanças</title>
+  <meta name="description" content="Serviços de mudanças residenciais e de escritório, transporte de mobiliário, embalagem e desmontagem, curta e longa distância e elevador exterior em Lisboa e Margem Sul.">
+  <meta name="keywords" content="transportes Lisboa, mudanças Lisboa, mudanças Margem Sul, mudanças Almada, mudanças Seixal, mudanças Barreiro, mudanças Montijo, mudanças Setúbal, elevador exterior, transporte de mobiliário, empresa de mudanças, orçamento mudanças">
+  <meta name="author" content="LEO Transportes & Mudanças">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leotransportes.pt/servicos">
+
+  <!-- Open Graph / partilha em redes sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Serviços de Mudanças em Lisboa e Margem Sul | LEO Transportes & Mudanças">
+  <meta property="og:description" content="Serviços de mudanças residenciais e de escritório, transporte de mobiliário, embalagem e desmontagem, curta e longa distância e elevador exterior em Lisboa e Margem Sul.">
+  <meta property="og:image" content="https://leotransportes.pt/assets/og-image-v3.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="LEO Transportes & Mudanças">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:url" content="https://leotransportes.pt/servicos">
+  <meta property="og:site_name" content="LEO Transportes & Mudanças">
+  <meta property="og:locale" content="pt_PT">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Serviços de Mudanças em Lisboa e Margem Sul | LEO Transportes & Mudanças">
+  <meta name="twitter:description" content="Serviços de mudanças residenciais e de escritório, transporte de mobiliário, embalagem e desmontagem, curta e longa distância e elevador exterior em Lisboa e Margem Sul.">
+  <meta name="twitter:image" content="https://leotransportes.pt/assets/og-image-v3.jpg">
+
+  <meta name="theme-color" content="#012138">
+
+  <!-- Ícone do separador -->
+  <link rel="icon" type="image/png" href="assets/logo1.png">
+
+  <!-- =========================================================
+       Verificação do Google Search Console (opcional)
+       ---------------------------------------------------------
+       1. Vá a https://search.google.com/search-console
+       2. Adicione a propriedade "leotransportes.pt" (tipo "Prefixo do URL")
+       3. Escolha o método de verificação "Etiqueta HTML"
+       4. Copie o valor do atributo content fornecido pela Google
+       5. Cole abaixo e remova os símbolos <!-- e --> que comentam a linha
+       ========================================================= -->
+  <!-- <meta name="google-site-verification" content="COLAR_AQUI_O_CODIGO_DA_GOOGLE"> -->
+
+  <!-- Tipografia (carregada sem bloquear a renderização) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
+
+  <!-- Folha de estilos -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- =========================================================
+       EmailJS — biblioteca cliente (sem backend, sem SMTP)
+       Funciona em Cloudflare Pages, GitHub Pages e localmente.
+       A configuração (Public Key / Service ID / Template ID) é
+       feita em js/script.js — ver secção "CONFIGURAÇÃO EMAILJS".
+       ========================================================= -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+
+  <!-- Dados estruturados (navegação) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://leotransportes.pt/" },
+      { "@type": "ListItem", "position": 2, "name": "Serviços de Mudanças", "item": "https://leotransportes.pt/servicos" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Link de acessibilidade para saltar direto ao conteúdo -->
+  <a class="skip-link" href="#main">Saltar para o conteúdo</a>
+
+  <!-- Botão flutuante do WhatsApp, visível em todo o site -->
+  <a class="whatsapp-float" href="https://wa.me/351911031945" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.84.5 3.55 1.38 5.03L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.78 14.1c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.12.11-1.8-.11-.41-.13-.95-.31-1.63-.6-2.87-1.24-4.74-4.12-4.88-4.31-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.08.99-2.37.26-.28.57-.36.76-.36h.55c.18 0 .42-.07.65.5.24.59.81 2.04.88 2.18.07.14.12.31.02.49-.1.18-.16.29-.31.45-.16.16-.32.36-.46.49-.16.15-.32.31-.14.62.18.31.81 1.34 1.74 2.16 1.2 1.07 2.21 1.4 2.53 1.56.32.16.51.13.7-.08.2-.21.84-.97 1.07-1.3.22-.32.45-.27.75-.16.31.11 1.95.92 2.28 1.09.33.16.55.25.63.39.08.15.08.85-.16 1.51z"/></svg>
+  </a>
+
+  <!-- ===================== Cabeçalho ===================== -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="/" class="logo-link" aria-label="LEO Transportes & Mudanças — Início">
+        <img src="assets/logo.png" alt="Logótipo LEO Transportes & Mudanças" width="1221" height="454">
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+        <ul>
+          <li class="has-submenu">
+            <a href="/servicos" class="nav-link is-active" aria-current="page" aria-haspopup="true">Serviços de Mudanças<span class="caret" aria-hidden="true"></span></a>
+            <ul class="submenu">
+              <li><a href="/servicos#mudancas-residenciais">Mudanças Residenciais</a></li>
+              <li><a href="/servicos#mudancas-escritorio">Mudanças de Escritório</a></li>
+              <li><a href="/servicos#transporte-mobiliario">Transporte de Mobiliário</a></li>
+              <li><a href="/servicos#embalagem-desmontagem">Embalagem e Desmontagem</a></li>
+              <li><a href="/servicos#curta-longa-distancia">Curta e Longa Distância</a></li>
+              <li><a href="/servicos#elevador-exterior">Elevador Exterior</a></li>
+            </ul>
+          </li>
+          <li><a href="/vantagens" class="nav-link">Vantagens</a></li>
+          <li><a href="/sobre" class="nav-link">Sobre Nós</a></li>
+          <li><a href="/cobertura" class="nav-link">Cobertura</a></li>
+          <li><a href="/orcamento" class="nav-link">Orçamento</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="header-social" aria-label="Redes sociais">
+          <a href="https://www.facebook.com/profile.php?id=61555397648218" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.2h2.4l.4-2.8h-2.8v-1.8c0-.8.2-1.4 1.4-1.4h1.5V5.1c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.1H8v2.8h2.5V21z"></path></svg></a>
+          <a href="https://www.instagram.com/leomudancaspt" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1"></circle></svg></a>
+        </div>
+        <a class="btn btn-whatsapp" href="https://wa.me/351911031945" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:16px;height:16px;"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.84.5 3.55 1.38 5.03L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.78 14.1c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.12.11-1.8-.11-.41-.13-.95-.31-1.63-.6-2.87-1.24-4.74-4.12-4.88-4.31-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.08.99-2.37.26-.28.57-.36.76-.36h.55c.18 0 .42-.07.65.5.24.59.81 2.04.88 2.18.07.14.12.31.02.49-.1.18-.16.29-.31.45-.16.16-.32.36-.46.49-.16.15-.32.31-.14.62.18.31.81 1.34 1.74 2.16 1.2 1.07 2.21 1.4 2.53 1.56.32.16.51.13.7-.08.2-.21.84-.97 1.07-1.3.22-.32.45-.27.75-.16.31.11 1.95.92 2.28 1.09.33.16.55.25.63.39.08.15.08.85-.16 1.51z"/></svg>
+          911 031 945
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <main id="main">
+
+    <!-- ===================== Cabeçalho da página ===================== -->
+    <section class="page-hero" aria-label="Serviços de Mudanças">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Caminho de navegação"><a href="/">Início</a><span aria-hidden="true">/</span><span>Serviços de Mudanças</span></nav>
+        <h1>Serviços de Mudanças em Lisboa e Margem Sul</h1>
+        <p>Soluções completas de mudanças e transporte, adaptadas à dimensão e às necessidades de cada cliente.</p>
+      </div>
+    </section>
+
+<!-- ===================== Serviços ===================== -->
+    <section class="services" id="servicos">
+      <div class="container">
+
+        <div class="services-grid services-grid--detail">
+          <article id="mudancas-residenciais" class="service-card service-card--detail reveal">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 4l9 5.5"></path><path d="M5 11v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8"></path><path d="M9 20v-6h6v6"></path></svg>
+            </div>
+            <h3>Mudanças Residenciais</h3>
+            <p>Mudamos a sua casa com cuidado, do primeiro ao último objeto, com total segurança.</p>
+            <p>Seja um apartamento ou uma moradia, planeamos a mudança consigo e tratamos do carregamento, do transporte e da descarga, protegendo cada móvel e cada objeto.</p>
+            <ul class="service-points">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg> Apartamentos e moradias</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg> Planeamento à medida de cada cliente</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg> Proteção de móveis e objetos</li>
+            </ul>
+            <a class="service-link" href="/orcamento">Pedir orçamento <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article id="mudancas-escritorio" class="service-card service-card--detail reveal reveal-delay-1">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M6 21V8l6-4 6 4v13"></path><path d="M10 21v-5h4v5"></path><path d="M9 11h.01M12 11h.01M15 11h.01"></path></svg>
+            </div>
+            <h3>Mudanças de Escritório</h3>
+            <p>Transição rápida e organizada, pensada para minimizar o impacto na sua atividade.</p>
+            <p>Organizamos a mudança para interromper o menos possível o seu trabalho, incluindo secretárias, arquivos, cadeiras e restante equipamento.</p>
+            <ul class="service-points">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg> Secretárias, arquivos e equipamentos</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg> Horários flexíveis</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg> Transição rápida e organizada</li>
+            </ul>
+            <a class="service-link" href="/orcamento">Pedir orçamento <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article id="transporte-mobiliario" class="service-card service-card--detail reveal reveal-delay-2">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v10H3z"></path><path d="M14 10h4l3 3v4h-7z"></path><circle cx="7.5" cy="18" r="1.6"></circle><circle cx="17.5" cy="18" r="1.6"></circle></svg>
+            </div>
+            <h3>Transporte de Mobiliário</h3>
+            <p>Transporte seguro de mobília, eletrodomésticos e equipamentos de qualquer dimensão.</p>
+            <p>Também transportamos peças soltas, como um sofá, um frigorífico ou um armário, sem ser necessária uma mudança completa.</p>
+            <ul class="service-points">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg> Móveis e eletrodomésticos</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg> Objetos volumosos</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg> Uma só peça ou vários itens</li>
+            </ul>
+            <a class="service-link" href="/orcamento">Pedir orçamento <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article id="embalagem-desmontagem" class="service-card service-card--detail reveal reveal-delay-3">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 4 3 8l9 4 9-4z"></path><path d="M3 8v8l9 4 9-4V8"></path><path d="M12 12v8"></path></svg>
+            </div>
+            <h3>Embalagem e Desmontagem</h3>
+            <p>Embalamos, desmontamos e montamos os seus móveis com material adequado a cada peça.</p>
+            <p>Utilizamos o material de embalagem mais adequado a cada peça e tratamos da desmontagem e da montagem do seu mobiliário no novo local.</p>
+            <ul class="service-points">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg> Material de embalagem adequado</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg> Desmontagem e montagem de móveis</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg> Proteção de peças frágeis</li>
+            </ul>
+            <a class="service-link" href="/orcamento">Pedir orçamento <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article id="curta-longa-distancia" class="service-card service-card--detail reveal reveal-delay-4">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M3 12h4M17 12h4M12 3v4M12 17v4"></path><path d="M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"></path></svg>
+            </div>
+            <h3>Curta e Longa Distância</h3>
+            <p>Cobertura em toda a Lisboa e Margem Sul, com rapidez, pontualidade e rastreio do percurso.</p>
+            <p>Seja dentro da mesma localidade ou entre concelhos diferentes, garantimos o transporte com pontualidade e acompanhamento do percurso.</p>
+            <ul class="service-points">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg> Lisboa e Margem Sul</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg> Rapidez e pontualidade</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg> Rastreio do percurso</li>
+            </ul>
+            <a class="service-link" href="/orcamento">Pedir orçamento <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article id="elevador-exterior" class="service-card service-card--detail reveal reveal-delay-5">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M10 9l2-2 2 2"></path><path d="M10 15l2 2 2-2"></path></svg>
+            </div>
+            <h3>Elevador Exterior</h3>
+            <p>Dispomos de elevador exterior para mudanças em pisos elevados, permitindo transportar mobiliário e objetos volumosos com maior segurança, rapidez e eficiência.</p>
+            <p>Ideal para prédios sem acesso fácil, permite subir e descer mobiliário e objetos volumosos pela fachada, poupando tempo e esforço.</p>
+            <ul class="service-points">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg> Mudanças em pisos elevados</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg> Objetos volumosos e pesados</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg> Maior segurança e rapidez</li>
+            </ul>
+            <a class="service-link" href="/orcamento">Pedir orçamento <span aria-hidden="true">&rarr;</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+        <!-- ===================== Chamada para ação ===================== -->
+    <section class="page-cta" aria-label="Pedir orçamento">
+      <div class="container">
+        <h2>Precisa de uma mudança em Lisboa ou Margem Sul?</h2>
+        <p>Peça o seu orçamento gratuito e sem compromisso.</p>
+        <div class="hero-cta">
+          <a class="btn btn-yellow" href="https://wa.me/351911031945" target="_blank" rel="noopener">Falar Agora</a>
+          <a class="btn btn-outline" href="/orcamento">Pedir Orçamento Grátis</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== Rodapé ===================== -->
+  <footer class="site-footer" id="contacto">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Logótipo LEO Transportes & Mudanças" loading="lazy" width="1221" height="454">
+        <p>Mudanças e transportes com eficiência em Lisboa e Margem Sul. Esse é o nosso compromisso.</p>
+        <div class="footer-social" aria-label="Redes sociais">
+          <a href="https://www.facebook.com/profile.php?id=61555397648218" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.2h2.4l.4-2.8h-2.8v-1.8c0-.8.2-1.4 1.4-1.4h1.5V5.1c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.1H8v2.8h2.5V21z"></path></svg></a>
+          <a href="https://www.instagram.com/leomudancaspt" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1"></circle></svg></a>
+          <a href="https://wa.me/351911031945" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.84.5 3.55 1.38 5.03L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.78 14.1c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.12.11-1.8-.11-.41-.13-.95-.31-1.63-.6-2.87-1.24-4.74-4.12-4.88-4.31-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.08.99-2.37.26-.28.57-.36.76-.36h.55c.18 0 .42-.07.65.5.24.59.81 2.04.88 2.18.07.14.12.31.02.49-.1.18-.16.29-.31.45-.16.16-.32.36-.46.49-.16.15-.32.31-.14.62.18.31.81 1.34 1.74 2.16 1.2 1.07 2.21 1.4 2.53 1.56.32.16.51.13.7-.08.2-.21.84-.97 1.07-1.3.22-.32.45-.27.75-.16.31.11 1.95.92 2.28 1.09.33.16.55.25.63.39.08.15.08.85-.16 1.51z"></path></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="/servicos">Serviços de Mudanças</a></li>
+          <li><a href="/vantagens">Vantagens</a></li>
+          <li><a href="/sobre">Sobre Nós</a></li>
+          <li><a href="/cobertura">Cobertura</a></li>
+          <li><a href="/orcamento">Orçamento</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contactos</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.87.69 2.76a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.33 1.82.56 2.76.69A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>+351 911 031 945 (WhatsApp)</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+          <span>leomudancastransportespt@gmail.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-7.2-7-12a7 7 0 0 1 14 0c0 4.8-7 12-7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>
+          <span>Lisboa e Margem Sul, Portugal</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="footer-legal-links">
+        <button type="button" class="footer-legal-link" data-modal-target="privacyModal">Política de Privacidade</button>
+        <span aria-hidden="true">·</span>
+        <button type="button" class="footer-legal-link" data-modal-target="cookiesModal">Política de Cookies</button>
+      </div>
+      <span>&copy; <span id="currentYear"></span> LEO Transportes &amp; Mudanças. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+  <!-- ===================== Modal: Política de Privacidade ===================== -->
+  <div class="modal-overlay" id="privacyModal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="privacyModalTitle">
+      <button type="button" class="modal-close" data-modal-close aria-label="Fechar">&times;</button>
+      <h3 id="privacyModalTitle">Política de Privacidade</h3>
+      <div class="modal-body">
+        <p>A LEO Transportes &amp; Mudanças respeita a privacidade dos seus utilizadores e compromete-se a proteger os dados pessoais recolhidos através deste website, em conformidade com o Regulamento Geral sobre a Proteção de Dados (RGPD).</p>
+
+        <p><strong>Recolha de dados.</strong> Ao preencher o formulário de contacto/orçamento neste website, recolhemos os seguintes dados: nome, telefone, email e mensagem.</p>
+
+        <p><strong>Finalidade do tratamento.</strong> Os dados recolhidos são utilizados exclusivamente para responder ao seu pedido de orçamento e para efeitos de contacto comercial relacionado com os nossos serviços de mudanças e transportes.</p>
+
+        <p><strong>Partilha de dados.</strong> Os seus dados pessoais não são vendidos nem cedidos a terceiros, exceto quando tal seja exigido por lei ou por autoridades públicas competentes.</p>
+
+        <p><strong>Os seus direitos.</strong> Enquanto titular dos dados, tem o direito de, a qualquer momento:</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Aceder aos dados pessoais que temos sobre si;</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Solicitar a retificação de dados incorretos ou desatualizados;</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Pedir a limitação do tratamento dos seus dados;</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Solicitar a eliminação dos seus dados pessoais.</li>
+        </ul>
+
+        <p>Para exercer qualquer um destes direitos, ou esclarecer qualquer dúvida sobre o tratamento dos seus dados, contacte-nos através do email <strong>leomudancastransportespt@gmail.com</strong>.</p>
+
+        <p><strong>Ferramentas de estatística e marketing.</strong> Este website poderá, futuramente, utilizar ferramentas como o Google Analytics, o Google Tag Manager e o Meta Pixel, para fins estatísticos e de melhoria contínua dos nossos serviços.</p>
+
+        <p><strong>Aviso importante.</strong> O envio do formulário de contacto/orçamento destina-se apenas ao pedido de informação e não constitui, por si só, qualquer contrato ou obrigação de prestação de serviços por parte da LEO Transportes &amp; Mudanças.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== Modal: Política de Cookies ===================== -->
+  <div class="modal-overlay" id="cookiesModal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="cookiesModalTitle">
+      <button type="button" class="modal-close" data-modal-close aria-label="Fechar">&times;</button>
+      <h3 id="cookiesModalTitle">Política de Cookies</h3>
+      <div class="modal-body">
+        <p><strong>O que são cookies.</strong> Os cookies são pequenos ficheiros de texto guardados no seu dispositivo (computador, telemóvel ou tablet) quando visita este website, permitindo reconhecer o seu navegador e melhorar a experiência de navegação.</p>
+
+        <p><strong>Utilização atual.</strong> Este website não utiliza, atualmente, cookies de terceiros para fins publicitários.</p>
+
+        <p><strong>Utilização futura.</strong> Informamos que o website poderá, no futuro, passar a utilizar cookies associados a ferramentas como o Google Analytics, o Google Tag Manager e o Meta Pixel, com o objetivo de recolher estatísticas de utilização e melhorar continuamente os nossos serviços.</p>
+
+        <p><strong>Gestão de cookies.</strong> Pode gerir, bloquear ou eliminar os cookies a qualquer momento através das definições do seu navegador de internet. Note que a desativação de determinados cookies pode afetar o funcionamento de algumas funcionalidades do website.</p>
+
+        <p>Para mais informações sobre esta política, contacte-nos através do email <strong>leomudancastransportespt@gmail.com</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== Aviso de Cookies ===================== -->
+  <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Aviso de cookies">
+    <div class="cookie-banner-inner">
+      <p>Utilizamos cookies para garantir o correto funcionamento do site e melhorar a sua experiência de navegação. Ao continuar, aceita a nossa <button type="button" class="cookie-banner-link" data-modal-target="cookiesModal">Política de Cookies</button>.</p>
+      <div class="cookie-banner-actions">
+        <button type="button" class="btn btn-yellow" id="cookieAcceptBtn">Aceitar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barra fixa de contacto (só em telemóvel) -->
+  <div class="mobile-cta-bar">
+    <a class="mobile-cta-call" href="tel:+351911031945"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.87.69 2.76a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.33 1.82.56 2.76.69A2 2 0 0 1 22 16.92z"></path></svg> Ligar</a>
+    <a class="mobile-cta-wa" href="https://wa.me/351911031945" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.84.5 3.55 1.38 5.03L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.78 14.1c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.12.11-1.8-.11-.41-.13-.95-.31-1.63-.6-2.87-1.24-4.74-4.12-4.88-4.31-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.08.99-2.37.26-.28.57-.36.76-.36h.55c.18 0 .42-.07.65.5.24.59.81 2.04.88 2.18.07.14.12.31.02.49-.1.18-.16.29-.31.45-.16.16-.32.36-.46.49-.16.15-.32.31-.14.62.18.31.81 1.34 1.74 2.16 1.2 1.07 2.21 1.4 2.53 1.56.32.16.51.13.7-.08.2-.21.84-.97 1.07-1.3.22-.32.45-.27.75-.16.31.11 1.95.92 2.28 1.09.33.16.55.25.63.39.08.15.08.85-.16 1.51z"/></svg> WhatsApp</a>
+  </div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

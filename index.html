@@ -112,17 +112,27 @@
   <!-- ===================== Cabeçalho ===================== -->
   <header class="site-header" id="header">
     <div class="container header-inner">
-      <a href="#hero" class="logo-link" aria-label="LEO Transportes & Mudanças — Início">
+      <a href="/" class="logo-link" aria-label="LEO Transportes & Mudanças — Início">
         <img src="assets/logo.png" alt="Logótipo LEO Transportes & Mudanças" width="1221" height="454">
       </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
         <ul>
-          <li><a href="#servicos" class="nav-link">Soluções</a></li>
-          <li><a href="#trabalhos" class="nav-link">Diferenciais</a></li>
-          <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
-          <li><a href="#cobertura" class="nav-link">Cobertura</a></li>
-          <li><a href="#orcamento" class="nav-link">Orçamento</a></li>
+          <li class="has-submenu">
+            <a href="/servicos" class="nav-link" aria-haspopup="true">Serviços de Mudanças<span class="caret" aria-hidden="true"></span></a>
+            <ul class="submenu">
+              <li><a href="/servicos#mudancas-residenciais">Mudanças Residenciais</a></li>
+              <li><a href="/servicos#mudancas-escritorio">Mudanças de Escritório</a></li>
+              <li><a href="/servicos#transporte-mobiliario">Transporte de Mobiliário</a></li>
+              <li><a href="/servicos#embalagem-desmontagem">Embalagem e Desmontagem</a></li>
+              <li><a href="/servicos#curta-longa-distancia">Curta e Longa Distância</a></li>
+              <li><a href="/servicos#elevador-exterior">Elevador Exterior</a></li>
+            </ul>
+          </li>
+          <li><a href="/vantagens" class="nav-link">Vantagens</a></li>
+          <li><a href="/sobre" class="nav-link">Sobre Nós</a></li>
+          <li><a href="/cobertura" class="nav-link">Cobertura</a></li>
+          <li><a href="/orcamento" class="nav-link">Orçamento</a></li>
         </ul>
       </nav>
 
@@ -142,9 +152,9 @@
     </div>
   </header>
 
-  <main id="main">
+    <main id="main">
 
-    <!-- ===================== Hero ===================== -->
+<!-- ===================== Hero ===================== -->
     <section class="hero" id="hero" aria-label="Destaque principal">
       <div class="hero-carousel" aria-hidden="true">
         <div class="hero-slide is-active" style="background-image:url('assets/carrocel1.webp');"></div>
@@ -203,7 +213,7 @@
       <div class="container">
         <div class="section-head center reveal">
           <p class="section-tag">O que fazemos</p>
-          <h2 class="section-title">Soluções</h2>
+          <h2 class="section-title">Serviços de Mudanças</h2>
           <p class="section-sub">Soluções completas de mudanças e transporte, adaptadas à dimensão e às necessidades de cada cliente.</p>
         </div>
 
@@ -213,7 +223,6 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 4l9 5.5"></path><path d="M5 11v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8"></path><path d="M9 20v-6h6v6"></path></svg>
             </div>
             <h3>Mudanças Residenciais</h3>
-            <p>Mudamos a sua casa com cuidado, do primeiro ao último objeto, com total segurança.</p>
           </div>
 
           <div class="service-card reveal reveal-delay-1">
@@ -221,7 +230,6 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M6 21V8l6-4 6 4v13"></path><path d="M10 21v-5h4v5"></path><path d="M9 11h.01M12 11h.01M15 11h.01"></path></svg>
             </div>
             <h3>Mudanças de Escritório</h3>
-            <p>Transição rápida e organizada, pensada para minimizar o impacto na sua atividade.</p>
           </div>
 
           <div class="service-card reveal reveal-delay-2">
@@ -229,7 +237,6 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v10H3z"></path><path d="M14 10h4l3 3v4h-7z"></path><circle cx="7.5" cy="18" r="1.6"></circle><circle cx="17.5" cy="18" r="1.6"></circle></svg>
             </div>
             <h3>Transporte de Mobiliário</h3>
-            <p>Transporte seguro de mobília, eletrodomésticos e equipamentos de qualquer dimensão.</p>
           </div>
 
           <div class="service-card reveal reveal-delay-3">
@@ -237,7 +244,6 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 4 3 8l9 4 9-4z"></path><path d="M3 8v8l9 4 9-4V8"></path><path d="M12 12v8"></path></svg>
             </div>
             <h3>Embalagem e Desmontagem</h3>
-            <p>Embalamos, desmontamos e montamos os seus móveis com material adequado a cada peça.</p>
           </div>
 
           <div class="service-card reveal reveal-delay-4">
@@ -245,7 +251,6 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M3 12h4M17 12h4M12 3v4M12 17v4"></path><path d="M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"></path></svg>
             </div>
             <h3>Curta e Longa Distância</h3>
-            <p>Cobertura em toda a Lisboa e Margem Sul, com rapidez, pontualidade e rastreio do percurso.</p>
           </div>
 
           <div class="service-card reveal reveal-delay-5">
@@ -253,18 +258,18 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M10 9l2-2 2 2"></path><path d="M10 15l2 2 2-2"></path></svg>
             </div>
             <h3>Elevador Exterior</h3>
-            <p>Dispomos de elevador exterior para mudanças em pisos elevados, permitindo transportar mobiliário e objetos volumosos com maior segurança, rapidez e eficiência.</p>
           </div>
         </div>
+        <div class="section-more"><a class="btn btn-navy" href="/servicos">Ver todos os serviços</a></div>
       </div>
     </section>
 
     <!-- ===================== Diferenciais ===================== -->
-    <section class="differentials" id="trabalhos" aria-label="Diferenciais">
+    <section class="differentials" id="trabalhos" aria-label="Vantagens">
       <div class="container">
         <div class="section-head center reveal">
-          <p class="section-tag">Os nossos diferenciais</p>
-          <h2 class="section-title">Diferenciais</h2>
+          <p class="section-tag">As nossas vantagens</p>
+          <h2 class="section-title">Vantagens</h2>
           <p class="section-sub">Profissionalismo, segurança e soluções adequadas para cada mudança.</p>
         </div>
 
@@ -281,7 +286,6 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 4 3 8l9 4 9-4z"></path><path d="M3 8v8l9 4 9-4V8"></path><path d="M12 12v8"></path></svg>
               </div>
               <h3>Embalamento e Proteção</h3>
-              <p>Protegemos cuidadosamente mobiliário, eletrodomésticos e objetos frágeis para garantir uma mudança segura.</p>
             </div>
           </div>
 
@@ -297,7 +301,6 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v10H3z"></path><path d="M14 10h4l3 3v4h-7z"></path><circle cx="7.5" cy="18" r="1.6"></circle><circle cx="17.5" cy="18" r="1.6"></circle></svg>
               </div>
               <h3>Transporte Seguro</h3>
-              <p>Transporte organizado e seguro, com viaturas preparadas para mudanças residenciais e empresariais.</p>
             </div>
           </div>
 
@@ -313,10 +316,10 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M10 9l2-2 2 2"></path><path d="M10 15l2 2 2-2"></path></svg>
               </div>
               <h3>Elevador Exterior</h3>
-              <p>Dispomos de elevador exterior para mudanças em pisos elevados, permitindo maior rapidez, segurança e eficiência.</p>
             </div>
           </div>
         </div>
+        <div class="section-more"><a class="btn btn-navy" href="/vantagens">Ver todas as vantagens</a></div>
       </div>
     </section>
 
@@ -343,14 +346,7 @@
           <p class="section-tag">Quem somos</p>
           <h2 class="section-title">Sobre Nós</h2>
           <p>A LEO Transportes &amp; Mudanças é uma empresa com mais de 10 anos de experiência, dedicada a tornar o processo de mudar de casa ou escritório mais simples, rápido e seguro, na zona de Lisboa e em toda a Margem Sul.</p>
-          <p>Cuidamos de cada pormenor — do planeamento ao transporte final — com uma equipa experiente, viaturas próprias, material de embalagem adequado e elevador exterior para mudanças em pisos elevados.</p>
-          <ul class="about-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Equipa própria e viaturas adequadas a cada mudança</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Cuidado total com os seus bens, do início ao fim</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Comunicação clara e orçamento sem surpresas</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Elevador exterior para mudanças em pisos altos</li>
-          </ul>
-          <a class="btn btn-navy" href="#orcamento">Pedir Orçamento</a>
+          <a class="btn btn-navy" href="/sobre">Saber mais sobre nós</a>
         </div>
       </div>
     </section>
@@ -379,23 +375,6 @@
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Setúbal</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Amora</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Barreiro</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Alcochete</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Moita</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Costa da Caparica</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Feijó</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Laranjeiro</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Cova da Piedade</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Charneca da Caparica</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Belverde</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Paio Pires</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Cruz de Pau</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Aroeira</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Marisol</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Sobreda</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Arrentela</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Quinta do Conde</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Pinhal de Frades</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Fernão Ferro</li>
             </ul>
           </div>
 
@@ -413,31 +392,10 @@
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Odivelas</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Paço de Arcos</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Loures</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Sacavém</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Queluz</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Rio de Mouro</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Carcavelos</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Benfica</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Casal de Cambra</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Carnaxide</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Alfragide</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Massamá</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Parede</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Alverca</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Algés</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Estoril</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> São João</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> São Domingos de Rana</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Moscavide</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Algueirão</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Mem Martins</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Rinchoa</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Porto Salvo</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Póvoa de Santo Adrião</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> São João da Talha</li>
             </ul>
           </div>
         </div>
+        <div class="section-more"><a class="btn btn-yellow" href="/cobertura">Ver toda a cobertura</a></div>
         <p class="coverage-note">Não encontra a sua localidade? Contacte-nos pelo WhatsApp — avaliamos sempre cada pedido.</p>
       </div>
     </section>
@@ -547,7 +505,7 @@
       </div>
     </section>
 
-  </main>
+    </main>
 
   <!-- ===================== Rodapé ===================== -->
   <footer class="site-footer" id="contacto">
@@ -565,11 +523,11 @@
       <div class="footer-col">
         <h4>Navegação</h4>
         <ul>
-          <li><a href="#servicos">Soluções</a></li>
-          <li><a href="#trabalhos">Diferenciais</a></li>
-          <li><a href="#sobre">Sobre Nós</a></li>
-          <li><a href="#cobertura">Cobertura</a></li>
-          <li><a href="#orcamento">Orçamento</a></li>
+          <li><a href="/servicos">Serviços de Mudanças</a></li>
+          <li><a href="/vantagens">Vantagens</a></li>
+          <li><a href="/sobre">Sobre Nós</a></li>
+          <li><a href="/cobertura">Cobertura</a></li>
+          <li><a href="/orcamento">Orçamento</a></li>
         </ul>
       </div>
 
@@ -658,6 +616,12 @@
         <button type="button" class="btn btn-yellow" id="cookieAcceptBtn">Aceitar</button>
       </div>
     </div>
+  </div>
+
+  <!-- Barra fixa de contacto (só em telemóvel) -->
+  <div class="mobile-cta-bar">
+    <a class="mobile-cta-call" href="tel:+351911031945"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.87.69 2.76a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.33 1.82.56 2.76.69A2 2 0 0 1 22 16.92z"></path></svg> Ligar</a>
+    <a class="mobile-cta-wa" href="https://wa.me/351911031945" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.84.5 3.55 1.38 5.03L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.78 14.1c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.12.11-1.8-.11-.41-.13-.95-.31-1.63-.6-2.87-1.24-4.74-4.12-4.88-4.31-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.08.99-2.37.26-.28.57-.36.76-.36h.55c.18 0 .42-.07.65.5.24.59.81 2.04.88 2.18.07.14.12.31.02.49-.1.18-.16.29-.31.45-.16.16-.32.36-.46.49-.16.15-.32.31-.14.62.18.31.81 1.34 1.74 2.16 1.2 1.07 2.21 1.4 2.53 1.56.32.16.51.13.7-.08.2-.21.84-.97 1.07-1.3.22-.32.45-.27.75-.16.31.11 1.95.92 2.28 1.09.33.16.55.25.63.39.08.15.08.85-.16 1.51z"/></svg> WhatsApp</a>
   </div>
 
   <script src="js/script.js" defer></script>
